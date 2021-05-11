@@ -29,7 +29,7 @@ const categoryCtrl = {
     deleteCategory: async (req, res) => {
         try{
             await Category.findByIdAndDelete(req.params.id)
-            res.json({msg: "Delete a Category"})
+            res.json({msg: "Delete a category"})
         } catch (err){
             return res.status(500).json({msg: err.message})
         }
